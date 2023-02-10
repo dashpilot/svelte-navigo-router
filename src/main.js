@@ -1,7 +1,7 @@
 import "./app.css";
 import App from "./App.svelte";
 
-// document.getElementById("app").innerHTML = "";
+document.getElementById("app").innerHTML = "";
 const app = new App({
   target: document.getElementById("app"),
 });
