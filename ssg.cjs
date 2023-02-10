@@ -41,7 +41,7 @@ async function renderPage() {
 
     // console.log(fullHtml);
 
-    if (page == "home") {
+    if (data.page == "home") {
       fs.writeFileSync("dist/index.html", fullHtml, "utf-8");
     } else {
       fs.mkdirSync("dist/" + page);
