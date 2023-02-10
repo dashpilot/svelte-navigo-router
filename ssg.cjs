@@ -44,8 +44,8 @@ async function renderPage() {
     if (data.page == "home") {
       fs.writeFileSync("dist/index.html", fullHtml, "utf-8");
     } else {
-      fs.mkdirSync("dist/" + page);
-      fs.writeFileSync("dist/" + page + "/index.html", fullHtml, "utf-8");
+      fs.mkdirSync("dist/" + data.page);
+      fs.writeFileSync("dist/" + data.page + "/index.html", fullHtml, "utf-8");
     }
   }
 }
