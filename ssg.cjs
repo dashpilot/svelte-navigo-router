@@ -33,7 +33,9 @@ async function renderPage() {
     </head>
 	  <body>
     <div id="app">
+    
 	    ${html}
+      
     </div>
 	  </body>
 	  </html>
