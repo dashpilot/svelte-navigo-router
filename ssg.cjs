@@ -30,9 +30,9 @@ async function getData() {
   <link rel="stylesheet" href="/assets/index.css">
   </head>
 	<body>
+    <div id="app">
 	  ${html}
-    
-   
+    </div>
 	</body>
 	</html>
   `;
