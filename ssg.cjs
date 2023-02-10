@@ -27,8 +27,9 @@ async function getData() {
 	</html>
   `;
 
-  console.log(fullHtml);
+  // console.log(fullHtml);
 
-  // fs.writeFileSync("dist/test.html", fullHtml, "utf-8");
+  fs.mkdirSync("dist/about");
+  fs.writeFileSync("dist/about/index.html", fullHtml, "utf-8");
 }
 getData();
