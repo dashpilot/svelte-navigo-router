@@ -6,7 +6,7 @@
   let router;
   let entries;
   
-  if(data.ssr){      
+  if(data && data.ssr){      
     entries = data.entries.filter(x=>x.page==data.page)
   }
   
@@ -62,9 +62,7 @@
 </nav>
 
 <main>
-  {#if data.page}
-  Rendering page: {data.page}
-  {/if}
+ 
   
   
   {#if entries}
