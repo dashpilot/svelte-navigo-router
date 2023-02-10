@@ -21,8 +21,13 @@ async function getData() {
 
   const fullHtml = `<!DOCTYPE html>
 	<html>
+  <head>
+  ${head}
+  </head>
 	<body>
 	  ${html}
+    
+   
 	</body>
 	</html>
   `;
