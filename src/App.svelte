@@ -67,7 +67,7 @@
   
   {#if entries}
  {#each entries as item}
- <section>
+ <section class="editable" id="{item.id}" data-fields="title=txt&amp;body=rte&amp;image=img">
  <h2>{item.title}</h2>
  {@html item.body}
  </section>
