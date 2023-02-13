@@ -69,7 +69,7 @@
  {#each entries as item}
  <section>
  <h2>{item.title}</h2>
- {@html body}
+ {@html item.body}
  </section>
  {/each}
  {/if}
