@@ -10,6 +10,13 @@
     entries = data.entries.filter(x=>x.page==data.page)
   }
   
+  // this allows you to update the data externally
+  window.update = (mydata) => {
+    console.log(data)
+    data = mydata;
+    data = data;
+  }
+  
   onMount(async () => {
     var resp = await fetch(
       "https://api.eu-central-1.linodeobjects.com/navigo/data.json", {cache: "no-store"}
