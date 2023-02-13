@@ -89,4 +89,8 @@
     width: 600px;
     margin: 0 auto;
   }
+  section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 </style>
