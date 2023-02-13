@@ -61,16 +61,19 @@
   {/if}
 </nav>
 
-<main class="mt-5">
+<div class="main mt-5">
  
   
   
   {#if entries}
  {#each entries as item}
+ <section>
  <h2>{item.title}</h2>
+ {@html body}
+ </section>
  {/each}
  {/if}
-</main>
+</div>
 
 <style>
   nav{
@@ -81,7 +84,7 @@
     color: white;
     margin-right: 10px;
   }
-  main{
+  .main{
     max-width: 100%;
     width: 600px;
     margin: 0 auto;
