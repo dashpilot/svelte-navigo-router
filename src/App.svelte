@@ -12,7 +12,7 @@
   
   onMount(async () => {
     var resp = await fetch(
-      "https://api.eu-central-1.linodeobjects.com/test/data.json"
+      "https://api.eu-central-1.linodeobjects.com/test/data.json", {cache: "no-store"}
     );
     data = await resp.json();
     console.log(data)
