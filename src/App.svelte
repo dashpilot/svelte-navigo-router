@@ -45,6 +45,7 @@
         console.log('updating')
         data = mydata;
         data = data;
+        entries = data.entries.filter(x=>x.page==window.page)
       }
   
 
