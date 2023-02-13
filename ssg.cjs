@@ -7,7 +7,7 @@ async function renderPage() {
   const SSR = true;
 
   const res = await fetch(
-    "https://api.eu-central-1.linodeobjects.com/test/data.json"
+    "https://api.eu-central-1.linodeobjects.com/navigo/data.json"
   );
   var data = await res.json();
 
