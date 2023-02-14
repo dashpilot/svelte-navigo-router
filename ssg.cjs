@@ -13,28 +13,6 @@ async function renderPage() {
 
   data.ssr = true;
 
-  var html = "";
-
-  const fullHtml = `<!DOCTYPE html>
-  <html>
-  <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite + Svelte</title>
-  <!-- <script type="module" crossorigin src="/assets/index.js"></script> -->
-  <link rel="stylesheet" href="/assets/index.css">
-  </head>
-  <body>
-  <div id="app">
-  
-    ${html}
-    
-  </div>
-  </body>
-  </html>
-  `;
-
   for (item of data.pages) {
     data.page = item.slug;
     data.isPage = true;
@@ -44,6 +22,26 @@ async function renderPage() {
     const { html, css, head } = Page.render({
       data: data,
     });
+
+    var fullHtml = `<!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Svelte</title>
+    <!-- <script type="module" crossorigin src="/assets/index.js"></script> -->
+    <link rel="stylesheet" href="/assets/index.css">
+    </head>
+    <body>
+    <div id="app">
+    
+      ${html}
+      
+    </div>
+    </body>
+    </html>
+    `;
 
     if (data.page == "home") {
       fs.writeFileSync("dist/index.html", fullHtml, "utf-8");
@@ -71,6 +69,26 @@ async function renderPage() {
     });
 
     var slug = slugify(item.title, item.id);
+
+    var fullHtml = `<!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Svelte</title>
+    <!-- <script type="module" crossorigin src="/assets/index.js"></script> -->
+    <link rel="stylesheet" href="/assets/index.css">
+    </head>
+    <body>
+    <div id="app">
+    
+      ${html}
+      
+    </div>
+    </body>
+    </html>
+    `;
 
     fs.mkdirSync("dist/article/" + slug);
     fs.writeFileSync("dist/article/" + slug + "/index.html", fullHtml, "utf-8");
