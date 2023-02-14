@@ -13,6 +13,8 @@ async function renderPage() {
 
   data.ssr = true;
 
+  var html = "";
+
   const fullHtml = `<!DOCTYPE html>
   <html>
   <head>
