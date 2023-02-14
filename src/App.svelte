@@ -7,8 +7,11 @@
   let entries;
   let notfound = false;
   
-  if(data && data.ssr){      
+  if(data && data.ssr && data.isPage){      
     entries = data.entries.filter(x=>x.page==data.page)
+  }
+  if(data && data.ssr && data.isEntry){      
+    entries = data.entries.filter(x=>x.id==data.id)
   }
   
   onMount(async () => {
