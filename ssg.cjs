@@ -61,9 +61,6 @@ async function renderPage() {
     data.isEntry = true;
     // console.log(data);
 
-    data.isPage = true;
-    data.isEntry = false;
-
     const { html, css, head } = Page.render({
       data: data,
     });
